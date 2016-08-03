@@ -1,5 +1,5 @@
 #!/bin/bash
-for i in `seq 1 10`;
-        do
-                echo $i
-        done 
+mkdir -p public_html
+for file in $(find . -type f | head -4); do
+            `mv $file public_html` 
+done
